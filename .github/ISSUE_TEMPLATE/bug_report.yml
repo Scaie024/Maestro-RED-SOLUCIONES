@@ -1,0 +1,44 @@
+# Configuración para GitHub Issues
+name: Bug Report
+description: Reportar un problema o error
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar este problema. Por favor completa la información solicitada.
+  
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción del problema
+      description: Describe detalladamente el problema que encontraste
+      placeholder: El servidor no inicia cuando...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducir
+      description: Lista los pasos para reproducir el problema
+      placeholder: |
+        1. Ejecutar `npm start`
+        2. Abrir navegador en localhost:3001
+        3. Error aparece...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: entorno
+    attributes:
+      label: Información del entorno
+      description: Información sobre tu sistema
+      placeholder: |
+        - OS: macOS / Windows / Linux
+        - Node.js version: 
+        - npm version:
+      render: markdown
+    validations:
+      required: true
